@@ -9,7 +9,7 @@
 
 ## Phase 2: Display Engine
 - [x] Create `TerminalLine` composable with locked height
-- [ ] Create `TerminalBlock` for grouped sections (title, box art, etc)
+- [x] Create `TerminalBlock` for grouped sections (title, box art, etc)
 - [ ] Add global style constants for fonts/colors/sizing
 - [ ] Support newline-aware ASCII formatting (aligned blocks)
 
