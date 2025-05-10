@@ -1,0 +1,45 @@
+
+[ THE HELION - BRIDGE STATUS ]
+
+AVA.EX-02    : ONLINE
+MODE         : AVA
+ALERT LEVEL  : GREEN
+CYCLE        : 0933 HRS
+DATE         : DAY 284, SC-Y227
+SECTOR       : C3 "Drift Halo"
+
+----------------------------
+[ SHIP SYSTEMS ]
+POWER        : ██████░░ (76%)
+CORE TEMP    : STABLE
+FUEL         : █████░░░░ (54%)
+BURN RATE    : 3% / SECTOR
+RESERVE      : ENABLED (10%)
+
+----------------------------
+[ ENGINE SPEC ]
+ENGINE TYPE  : Driftburn Plasma Fuel System
+MOVE COST    : 3% FUEL / SECTOR
+LOCAL TRAVEL : NO FUEL COST
+OVERBURN     : TEMP BOOST +30% POWER
+             : INCREASED HEAT + SYSTEM STRESS
+
+----------------------------
+[ NAV SNAPSHOT ]
+• NEAREST NODE : "Wrecksignal - UED"
+• SIGNAL SCAN  : 2 ACTIVE SOURCES
+• NAV ROUTE    : 1 Jump Ready
+
+----------------------------
+[ AVA FEED ]
+> Captain, drift activity detected 2 klicks out.
+> Fuel stable for one sector jump.
+> Recommend passive scan or silent trajectory.
+
+----------------------------
+[ TACTICAL SUMMARY ]
+WEAPONS      : ONLINE
+SHIELDS      : 82% INTEGRITY
+TARGET LOCK  : NONE
+THREATS      : LOCAL SCAN CLEAN
+----------------------------

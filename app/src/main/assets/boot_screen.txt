@@ -1,0 +1,14 @@
+[DELAY:1500]
+/(
+/======================================\
+||  |  |  __|  |    _ _|   _ \   \ |  ||
+||  __ |  _|   |      |   (   | .  |  ||
+|| _| _| ___| ____| ___| \___/ _|\_|  ||
+\======================================/
+/)
+[HELION SYSTEMS ONLINE]
+> Welcome, Captain.
+Booting S.A.R.A.H...
+(Ship Artificial Ready Assistant Helper)
+Status: ACTIVE
+[TAP_TO_CONTINUE]
