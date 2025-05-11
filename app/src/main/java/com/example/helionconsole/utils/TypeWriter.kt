@@ -1,6 +1,7 @@
 package com.example.helionconsole.utils
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -28,14 +29,14 @@ fun SpinnerLine() {
 
     LaunchedEffect(Unit) {
         while (true) {
-            delay(100)
+            delay(10)
             index = (index + 1) % spinnerChars.size
         }
     }
 
     TerminalLine(
         text = "[SCANNING] ${spinnerChars[index]}",
-        fontSize = 14.sp,
+        //fontSize = 12.sp,
         heightMultiplier = 2.0f // tweak if needed
     )
 }
@@ -44,22 +45,28 @@ fun SpinnerLine() {
 fun TypewriterText(
     fullText: String,
     charDelay: Long = 25L,
+    skipSignal: Boolean = false,
     onFinished: (() -> Unit)? = null
 ) {
     var visibleText by remember { mutableStateOf("") }
 
-    LaunchedEffect(fullText) {
+    LaunchedEffect(fullText, skipSignal) {
         visibleText = ""
-        for (char in fullText) {
-            visibleText += char
-            delay(charDelay)
+        if (skipSignal) {
+            visibleText = fullText
+            onFinished?.invoke()
+        } else {
+            for (char in fullText) {
+                visibleText += char
+                delay(charDelay)
+            }
+            onFinished?.invoke()
         }
-        onFinished?.invoke()
     }
 
     TerminalLine(
         text = visibleText,
-        fontSize = 14.sp,
+        //fontSize = 12.sp,
         heightMultiplier = 2.0f // tweak if needed
     )
 }
@@ -92,7 +99,7 @@ fun ParallelTypewriterBlock(
         }
     }
 
-    val lineHeight = with(LocalDensity.current) { 28.sp.toDp() }
+    val lineHeight = with(LocalDensity.current) { 26.sp.toDp() }
 
     Column {
         lines.forEachIndexed { index, _ ->
@@ -105,7 +112,7 @@ fun ParallelTypewriterBlock(
             ) {
                 TerminalLine(
                     text = animatedText,
-                    fontSize = 14.sp,
+                    //fontSize = 12.sp,
                     heightMultiplier = 2.0f // tweak if needed
                 )
             }

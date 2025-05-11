@@ -7,8 +7,16 @@
 \======================================/
 /)
 [HELION SYSTEMS ONLINE]
-> Welcome, Captain.
+> Welcome, Captain Sol.
 Booting S.A.R.A.H...
-(Ship Artificial Ready Assistant Helper)
+(System Access, Routing & Asset Handler)
 Status: ACTIVE
-[TAP_TO_CONTINUE]
+
+Input to activate UI:
+[1] BRIDGE – Command Overview & Alerts
+[2] ENGINEERING – Power & Thermal Systems
+[3] NAVIGATION – Sector Maps & Jump Control
+[4] AI CORE – AVA Configuration & Memory Access
+[5] COMMS ARRAY – Comm Logs & Signal Links
+[6] TACTICAL – Weapons & Defensive Systems
+[7] EXTERNAL SENSORS – Environment & Signal Data

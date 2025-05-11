@@ -11,7 +11,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.ui.draw.alpha
 
@@ -23,16 +24,13 @@ fun TerminalLine(
     fontColor: Color = Color.Green,
     fontFamily: FontFamily = FontFamily.Monospace,
     heightMultiplier: Float = 2.0f, // ← works best between 1.8–2.2 for monospace
-    softWrap: Boolean = false,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    overflow: TextOverflow = TextOverflow.Visible,
     alpha: Float = 1f
 ) {
-    val lineHeightDp: Dp = with(LocalDensity.current) {
-        (fontSize.value * heightMultiplier).dp
-    }
-
-    Box(
+    Column(
         modifier = modifier
-            .height(lineHeightDp)
     ) {
         Text(
             text = text,
@@ -40,9 +38,10 @@ fun TerminalLine(
             fontSize = fontSize,
             fontFamily = fontFamily,
             softWrap = softWrap,
-            maxLines = 1,
-            overflow = TextOverflow.Clip,
+            maxLines = maxLines,
+            overflow = overflow,
             modifier = Modifier.alpha(alpha)
         )
+        Spacer(modifier = Modifier.height(4.dp))
     }
 }
